@@ -1,6 +1,5 @@
 const board = document.getElementById("board");
 
-
 let boxClassName = "box.className";
 
 let boxStyle = ""
