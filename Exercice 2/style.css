@@ -1,0 +1,31 @@
+
+
+#board {
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+    border: 1px solid black
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green {
+    background-color: green;       
+}
+
+.yellow {
+    background-color: yellow;   
+}

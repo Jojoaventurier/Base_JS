@@ -1,0 +1,22 @@
+
+
+#board {
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(162, 142, 238);
+    border: 1px solid black;
+    color: white;
+}
+
+
+
