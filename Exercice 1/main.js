@@ -9,12 +9,9 @@ let boxTextColor = ""
 let boxHeight = ""
 let boxWidth = ""
 let boxDisplay = ""
-let boxFontName = ""
-let boxFontSize = ""
+let boxFont = ""
 
-let boxStyleArr = [boxBackgroundColor, boxTextColor, boxHeight, boxWidth, boxDisplay, boxFontName, boxFontSize]
-
-
+let boxStyleArr = []
 
 let box = document.createElement("div")
 box.classList.add("box")
@@ -35,12 +32,13 @@ boxTextColor = boxStyle.color
 boxHeight = boxStyle.height
 boxWidth = boxStyle.width
 boxDisplay = boxStyle.display
-boxFontName = boxStyle.font
-boxFontSize = boxStyle.fontSize
+boxFont = boxStyle.font
+
+boxStyleArr = [boxBackgroundColor, boxTextColor, boxHeight, boxWidth, boxDisplay, boxFont]
 
 function displayBoxStyle() {
 
-    console.log(boxHeight)
+    alert(boxStyleArr);
 }
 
 
