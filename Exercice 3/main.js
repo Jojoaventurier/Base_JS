@@ -26,8 +26,8 @@ boxes.forEach(box => {
     })
 }) 
 
-console.log(boxes)
-console.log(boxes2)
+//console.log(boxes)
+//console.log(boxes2)
 
 
 
