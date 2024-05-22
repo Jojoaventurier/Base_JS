@@ -108,7 +108,6 @@ const buttonPressed = e => {
 
 }
 
-
 for (let button of buttons) {
   button.addEventListener("click", buttonPressed);
 }
