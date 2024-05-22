@@ -51,6 +51,7 @@ function echangerCouleurs() { // permet d'interchanger les couleurs en mélangea
     }
 }
 
+
 let colorsArr = ["blue", "red", "green", "yellow"] // couleurs pour les div
 
 const board = document.getElementById("board") // récupération de la div qui contiendra nos prochaines boîtes
@@ -65,7 +66,6 @@ secondBox.classList.add("box")
 secondBoard.appendChild(secondBox)
 
 
-
 for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     let newbox = box.cloneNode()
     newbox.innerText = i;
@@ -73,42 +73,7 @@ for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     board.appendChild(newbox)  // matérialiser les 4 div créees dans la <div id="board">
 }
 
-let secondBoxStyle = ""
 
-
-let couleur = ""
-
-function getColor(newbox) {
-    couleur = newbox.className
-    console.log(couleur)
-}
-
-
-
-function changerCouleur(newbox) {
-    
-    secondBox.className = "box"
-
-    switch(secondBox.className) {
-
-        case "blue" :
-            secondBox.className = "blue"
-            break;
-
-        case "red" :
-            secondBox.className = "red"
-            break
-
-        case "green" :
-            secondBox.className = "green"
-            break
-
-        case "yellow" :
-            secondBox.className = "yellow"
-            break
-    }
-    
-}
 
 
 
