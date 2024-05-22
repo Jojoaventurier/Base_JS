@@ -17,7 +17,7 @@ function shuffle(array) {
     return array;
 }
 
-let style = []
+
 
 function attribuerCouleurs() {      
     colorsArr = ["blue", "red", "green", "yellow"]  // permet de revenir au tableau de départ mélangé par shuffle()
@@ -28,10 +28,7 @@ function attribuerCouleurs() {
         boxes[i - 1].className = "box"; // permet de réinitialiser la classe de chaque boîte (enlever .blue, .yellow etc) et revenir à sa classe initiale .box
 
         boxes[i - 1].classList.add(colorsArr[i - 1]) // permet de réattribuer les couleurs initiales aux boîtes
-
-        style[i - 1] += boxes[i - 1].className
     }
-    
   }
 
 
@@ -46,9 +43,6 @@ function echangerCouleurs() { // permet d'interchanger les couleurs en mélangea
         boxes[i - 1].className = "box";
 
         boxes[i-1].classList.add(randomColors[i - 1]);
-
-        style[i - 1] += boxes[i - 1].className
-
     }
 }
 
@@ -73,9 +67,6 @@ for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     newbox.setAttribute("id", `${i}`)
     newbox.addEventListener("click", myFunction)
     board.appendChild(newbox)  // matérialiser les 4 div créees dans la <div id="board">
-}
-
-function myFunction() {
 }
 
 
@@ -117,7 +108,6 @@ const buttonPressed = e => {
     }
 
 }
-
 
 for (let button of buttons) {
   button.addEventListener("click", buttonPressed);
