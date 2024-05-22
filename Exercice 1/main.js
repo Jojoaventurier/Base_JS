@@ -1,25 +1,9 @@
 
-function showAlert(message) {
+let alertBox = document.getElementById("alertBox")
+let message = document.getElementById("message");
+let messageAffiche = "";
 
-    alertBox.classList.remove("hide");
-     msg.innerText = message;
-   }
-   
-   function hideAlert() {
-     
-     alertBox.classList.add("hide");
-     msg.innerText = message;
-   }
-
-
-var d = document,
-  alertBox = d.getElementById("alertBox"),
-  message = d.getElementById("message");
-
-// events
-
- d.getElementById("btnClose").addEventListener("click", hideAlert );
-
+document.getElementById("btnClose").addEventListener("click", hideAlert );
 
 const board = document.getElementById("board"); // récupérer la div "board" qui contient notre carré
 
@@ -43,9 +27,7 @@ board.appendChild(box)  // matérialiser les boîtes
 
 boxStyle = window.getComputedStyle(box);  // récupérer tous les attributs css appliqués à la div ".box"
 
-box.onclick = function () {   // ajout de l'appel à la fonction showAlert() quand on clique sur la div
-    showAlert(message);
-}
+box.addEventListener("click", showAlert)
 
 boxClassName = box.className; // on réassigne les variables déclarées pour qu'elles contiennent la valeur des paramètres css que l'on souhaite afficher
 
@@ -57,26 +39,27 @@ boxDisplay = boxStyle.display
 boxFont = boxStyle.font
 
 boxStyleArr = [boxBackgroundColor, boxTextColor, boxHeight, boxWidth, boxDisplay, boxFont] // mise des valeurs des paramètres dans un tableau pour faciliter la manipulation
-message = ` ${boxClassName} + "<br>" +
-"- Background color : " + ${boxStyleArr[0]} + "<br>" +
-"- Text color:  : " + ${boxStyleArr[1]} + "<br>" +
-"- Height : " + ${boxStyleArr[2]} + "<br>" +
-"- Width : " + ${boxStyleArr[3]} + "<br>" +
-"- Diplay : " + ${boxStyleArr[4]} + "<br>" +
-"- Font : " + ${boxStyleArr[5]} + "<br>"`;
 
-function displayBoxStyle() {
+messageAffiche = `Classe : .${boxClassName} <br> 
+- Background color : ${boxStyleArr[0]} <br>
+- Text color:  : ${boxStyleArr[1]} <br>
+- Height : ${boxStyleArr[2]} <br>
+- Width : ${boxStyleArr[3]} <br>
+- Diplay : ${boxStyleArr[4]} <br>
+- Font :  ${boxStyleArr[5]} <br> `; // mise en forme du message qui s'affiche
 
-    alert(boxClassName + "<br>" +
-        "- Background color : " + boxStyleArr[0] + "<br>" +
-        "- Text color:  : " + boxStyleArr[1] + "<br>" +
-        "- Height : " + boxStyleArr[2] + "<br>" +
-        "- Width : " + boxStyleArr[3] + "<br>" +
-        "- Diplay : " + boxStyleArr[4] + "<br>" +
-        "- Font : " + boxStyleArr[5] + "<br>"
-    );
+
+
+function showAlert() {
+
+    alertBox.classList.remove("hide");
+    message.innerHTML = messageAffiche;
 }
 
-
+function hideAlert() {
+    
+    alertBox.classList.add("hide");
+    message.innerText = messageAffiche;
+}
 
 
