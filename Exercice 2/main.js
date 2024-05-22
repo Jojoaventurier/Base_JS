@@ -69,7 +69,6 @@ secondBoard.appendChild(secondBox)
 for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     let newbox = box.cloneNode()
     newbox.innerText = i;
-    newbox.addEventListener("click", getColor)
     board.appendChild(newbox)  // matérialiser les 4 div créees dans la <div id="board">
 }
 
