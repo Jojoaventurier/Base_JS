@@ -48,6 +48,7 @@ function echangerCouleurs() { // permet d'interchanger les couleurs en mélangea
         boxes[i-1].classList.add(randomColors[i - 1]);
 
         style[i - 1] += boxes[i - 1].className
+
     }
 }
 
@@ -69,24 +70,58 @@ secondBoard.appendChild(secondBox)
 for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     let newbox = box.cloneNode()
     newbox.innerText = i;
+    newbox.setAttribute("id", `${i}`)
+    newbox.addEventListener("click", myFunction)
     board.appendChild(newbox)  // matérialiser les 4 div créees dans la <div id="board">
 }
 
+function myFunction() {
+}
 
 
+let essai =""
+let variable = ""
+
+const buttons = document.getElementsByTagName("div");
+
+const buttonPressed = e => {
+
+    //console.log(e.target.id)
+    essai = e.target.id;  // Get ID of Clicked Element
+
+  switch (essai) {
+
+    case "1":
+        variable = document.getElementById(essai).classList
+        secondBox.className = variable
+        break;
+
+    case "2":
+        variable = document.getElementById(essai).classList
+        secondBox.className = variable
+        break;
+
+    case "3":
+        variable = document.getElementById(essai).classList
+        secondBox.className = variable
+        break;
+
+    case "4":
+        variable = document.getElementById(essai).classList
+        secondBox.className = variable
+        break;
+
+    default:
+        secondBox.className = "box"
+        break;
+    }
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+for (let button of buttons) {
+  button.addEventListener("click", buttonPressed);
+}
 
 
 
