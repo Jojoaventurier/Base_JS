@@ -17,6 +17,8 @@ function shuffle(array) {
     return array;
 }
 
+let style = []
+
 function attribuerCouleurs() {      
     colorsArr = ["blue", "red", "green", "yellow"]  // permet de revenir au tableau de départ mélangé par shuffle()
     let boxes = document.getElementsByClassName("box")
@@ -25,8 +27,11 @@ function attribuerCouleurs() {
 
         boxes[i - 1].className = "box"; // permet de réinitialiser la classe de chaque boîte (enlever .blue, .yellow etc) et revenir à sa classe initiale .box
 
-        boxes[i-1].classList.add(colorsArr[i - 1]) // permet de réattribuer les couleurs initiales aux boîtes
+        boxes[i - 1].classList.add(colorsArr[i - 1]) // permet de réattribuer les couleurs initiales aux boîtes
+
+        style[i - 1] += boxes[i - 1].className
     }
+    
   }
 
 
@@ -34,28 +39,85 @@ function echangerCouleurs() { // permet d'interchanger les couleurs en mélangea
 
     let boxes = document.getElementsByClassName("box")
     let randomColors = shuffle(colorsArr);
-    console.log(colorsArr)
+    
+
     for(let i = 1; i <= 4; i++) {
 
         boxes[i - 1].className = "box";
 
         boxes[i-1].classList.add(randomColors[i - 1]);
+
+        style[i - 1] += boxes[i - 1].className
     }
 }
 
+let colorsArr = ["blue", "red", "green", "yellow"] // couleurs pour les div
 
-const board = document.getElementById("board");
+const board = document.getElementById("board") // récupération de la div qui contiendra nos prochaines boîtes
+const secondBoard = document.getElementById("secondBoard")
+
+
 let box = document.createElement("div") //creation d'une div
 box.classList.add("box")    // ajout de la classe .box à cette div
 
-let colorsArr = ["blue", "red", "green", "yellow"] // couleurs pour les div
+let secondBox = document.createElement("div")
+secondBox.classList.add("box")
+secondBoard.appendChild(secondBox)
+
 
 
 for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     let newbox = box.cloneNode()
     newbox.innerText = i;
+    newbox.addEventListener("click", getColor)
     board.appendChild(newbox)  // matérialiser les 4 div créees dans la <div id="board">
 }
+
+let secondBoxStyle = ""
+
+
+let couleur = ""
+
+function getColor(newbox) {
+    couleur = newbox.className
+    console.log(couleur)
+}
+
+
+
+function changerCouleur(newbox) {
+    
+    secondBox.className = "box"
+
+    switch(secondBox.className) {
+
+        case "blue" :
+            secondBox.className = "blue"
+            break;
+
+        case "red" :
+            secondBox.className = "red"
+            break
+
+        case "green" :
+            secondBox.className = "green"
+            break
+
+        case "yellow" :
+            secondBox.className = "yellow"
+            break
+    }
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 
