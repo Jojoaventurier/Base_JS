@@ -22,3 +22,32 @@
     display: none;
   }
 
+#alertBox {
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    border: solid 1px black;
+    width: 300px;
+    position: absolute;
+    left: -150px;
+    padding: 10px;
+    padding-bottom: 50px;
+    text-align: left; 
+}
+
+#alertbox2:after {
+    margin: 5px;
+  }
+
+#container {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 0%;
+  }
+
+  #btnClose {
+    position: absolute;
+    right: 20px;
+    padding: 5px 35px;
+  }
