@@ -65,7 +65,6 @@ for(let i = 1; i <= 4; i++) {   // création de 4 boîtes
     let newbox = box.cloneNode()
     newbox.innerText = i;
     newbox.setAttribute("id", `${i}`)
-    newbox.addEventListener("click", myFunction)
     board.appendChild(newbox)  // matérialiser les 4 div créees dans la <div id="board">
 }
 
@@ -108,6 +107,7 @@ const buttonPressed = e => {
     }
 
 }
+
 
 for (let button of buttons) {
   button.addEventListener("click", buttonPressed);
