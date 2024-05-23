@@ -44,7 +44,9 @@
 
 .boxClicked {
     background-color: rgb(17, 0, 255);
-    animation:spin 1s linear;   
+    animation:spin 1s linear;
+    height: 180px;
+    width: 180px;   
     
 }
 
