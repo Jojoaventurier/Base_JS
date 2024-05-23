@@ -1,29 +1,39 @@
-
-
-spans = document.querySelectorAll(".span")
-icons = document.querySelectorAll(".fa-brands")
-
-spans.forEach(span => {
-    span.addEventListener("click", () => {
-        //console.log("clicked")
-        span.classList.toggle("spanClicked")
-
-        })
-    })
-
-
 let id =""
 let variable = ""
 
 const buttons = document.getElementsByTagName("span");
 const playstationIcon = document.querySelector("#playstation")
-const xboxIcon = document.getElementById("xbox")
-const steamIcon = document.getElementById("steam")
+const xboxIcon = document.querySelector("#xbox")
+const steamIcon = document.querySelector("#steam")
 
 const playsationSpan = document.querySelector("#playstationSpan")
-const xboxSpan = document.getElementById("xboxSpan")
-const steamSpan = document.getElementById("steamSpan")
+const xboxSpan = document.querySelector("#xboxSpan")
+const steamSpan = document.querySelector("#steamSpan")
 
+spansAndIcons = document.querySelectorAll(".span")
+
+console.log(spansAndIcons)
+
+
+
+spansAndIcons.forEach(span => {
+    span.addEventListener("click", () => {
+        //console.log("clicked")
+        span.classList.toggle("spanClicked")
+        })
+    })
+    
+/*
+icons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        icon.classList.toggle("clicked")
+    })
+} )
+ */   
+
+
+
+/*
 const buttonPressed = e => {
 
     console.log(e.target.id)
@@ -34,22 +44,21 @@ const buttonPressed = e => {
     case "playstationSpan":
     case "playstation":
 
+        playstationIcon.classList.toggle("clicked")
         console.log("hello")
         
         break;
 
     case "xboxSpan":
-        variable = document.getElementById(essai).classList
-        secondBox.className = variable
+       
         break;
 
     case "steamSpan":
-        variable = document.getElementById(essai).classList
-        secondBox.className = variable
+        
         break;
 
     default:
-        secondBox.className = "box"
+        
         break;
     }
 }
@@ -57,5 +66,5 @@ const buttonPressed = e => {
 for (let button of buttons) {
   button.addEventListener("click", buttonPressed);
 }
-
-console.log(spans)   
+*/
+ 
