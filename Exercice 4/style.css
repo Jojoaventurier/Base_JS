@@ -11,7 +11,6 @@
     background-color: #a0d2eb;
 }
 
-
 .container {
     height: 300px;
     width: 500px;
@@ -23,53 +22,43 @@
 }
 
 .container.containerClickedPlaystation {
-
     background-color: #0049B7;
 }
 .containerClickedXbox {
-
     background-color: #226621;
 }
 .containerClickedSteam {
-
     background-color: #3D4450;
 }
 
-.span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    transition: all 0.5s ease;
-}
 
+.fa-brands {
+    color: white;
+    font-size: 1.5rem;
+    padding: 11px;
+}
 
 .fa-playstation {
     background-color: #0049B7;
-    color: white;
-    font-size: 1.5rem;
-    padding: 11px;
 }
 .fa-xbox {
     background-color: #226621;
-    color: white;
-    font-size: 1.5rem;
-    padding: 11px;
+
 }
 .fa-steam{
     background-color: #3D4450;
-    color: white;
-    font-size: 1.5rem;
-    padding: 11px;
 }
 
 .clicked {
-    
     color: black;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+p {
+    font-size: 0.4rem;
+    font-family: sans-serif;
 }
 
 .marque {
@@ -77,7 +66,23 @@
 }
 
 .marqueClicked {
-    display: contents;
+    position: absolute;
+    bottom: -5px;
+    left: 8.3px;
 }
 
+p#xbox.marqueClicked {
+    left: 15px;
+} 
+
+p#steam.marqueClicked {
+    left: 13px;
+}
+
+.bigSpan {
+    display: flex;
+    flex-wrap: nowrap;
+    position : relative;
+    text-align: center;
+}
 

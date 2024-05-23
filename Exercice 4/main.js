@@ -1,9 +1,4 @@
-let id =""
-let variable = ""
 
-const playsationSpan = document.querySelector("#playstationSpan")
-const xboxSpan = document.querySelector("#xboxSpan")
-const steamSpan = document.querySelector("#steamSpan")
 
 /*
 let playstationSpanClassHTML = document.getElementsByClassName(".fa-playstation") // HTML collection
@@ -19,6 +14,11 @@ let xboxSpanClassObject = document.querySelector(".fa-xbox") // object
 let steamSpanClassObject = document.querySelector(".fa-steam") // object
 //let steamSpanClassHTML = document.getElementsByClassName(".fa-steam") //html collection
 
+
+let marqueSpanPlay = document.querySelector(".playstation") // Node List
+let marqueSpanXbox = document.querySelector(".xbox") // Node List
+let marqueSpanSteam = document.querySelector(".steam") // Node List
+
 let background = document.querySelector(".container")
 
 let isActive = document.querySelector(".span").className
@@ -27,7 +27,9 @@ let isContainerActive = document.querySelector(".container").className
 
 const buttons = document.getElementsByTagName("i");
 const buttonPressed = e => {
-    console.log(e.target.className);  // Get ID of Clicked Element
+
+    //console.log(e.target.className);  // Get ClassName of Clicked Element
+    console.log(e.target.className)
 
     variable = e.target.className
 
@@ -39,6 +41,9 @@ const buttonPressed = e => {
             playstationSpanClassObject.className = "fa-brands fa-playstation span"
             xboxSpanClassObject.className = "fa-brands fa-xbox span"
             steamSpanClassObject.className = "fa-brands fa-steam span"
+            marqueSpanPlay.className = "marque playstation" 
+            marqueSpanXbox.className = "marque xbox" 
+            marqueSpanSteam.className = "marque steam"
 
         break;
 
@@ -48,6 +53,9 @@ const buttonPressed = e => {
             playstationSpanClassObject.className = "fa-brands fa-playstation span clicked"
             xboxSpanClassObject.className = "fa-brands fa-xbox span"
             steamSpanClassObject.className = "fa-brands fa-steam span"
+            marqueSpanPlay.className = "playstation marqueClicked" 
+            marqueSpanXbox.className = "marque xbox" 
+            marqueSpanSteam.className = "marque steam"
             
         break;
 
@@ -57,6 +65,9 @@ const buttonPressed = e => {
             steamSpanClassObject.className = "fa-brands fa-steam span"
             xboxSpanClassObject.className = "fa-brands fa-xbox span"
             playstationSpanClassObject.className = "fa-brands fa-playstation span"
+            marqueSpanPlay.className = "marque playstation"
+            marqueSpanXbox.className = "marque xbox"
+            marqueSpanSteam.className = "marque steam"
         break;
 
         case "fa-brands fa-xbox span" : 
@@ -65,6 +76,9 @@ const buttonPressed = e => {
             xboxSpanClassObject.className = "fa-brands fa-xbox span clicked"
             playstationSpanClassObject.className = "fa-brands fa-playstation span"
             steamSpanClassObject.className = "fa-brands fa-steam span"
+            marqueSpanPlay.className = "marque playstation" 
+            marqueSpanXbox.className = "xbox marqueClicked" 
+            marqueSpanSteam.className = "marque steam"
              
         break
 
@@ -73,6 +87,9 @@ const buttonPressed = e => {
             steamSpanClassObject.className = "fa-brands fa-steam span"
             playstationSpanClassObject.className = "fa-brands fa-playstation span"
             xboxSpanClassObject.className = "fa-brands fa-xbox span"
+            marqueSpanPlay.className = "marque playstation" 
+            marqueSpanXbox.className = "marque xbox" 
+            marqueSpanSteam.className = "marque steam"
         break;
 
         case "fa-brands fa-steam span":
@@ -81,6 +98,9 @@ const buttonPressed = e => {
             steamSpanClassObject.className = "fa-brands fa-steam span clicked"
             playstationSpanClassObject.className = "fa-brands fa-playstation span"
             xboxSpanClassObject.className = "fa-brands fa-xbox span"
+            marqueSpanPlay.className = "marque playstation" 
+            marqueSpanXbox.className = "marque xbox" 
+            marqueSpanSteam.className = "steam marqueClicked"
         break;
 
 
@@ -92,8 +112,6 @@ const buttonPressed = e => {
 for (let button of buttons) {
   button.addEventListener("click", buttonPressed);
 }
-
-
 
 
 
