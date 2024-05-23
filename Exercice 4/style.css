@@ -36,6 +36,7 @@
     color: white;
     font-size: 1.5rem;
     padding: 11px;
+    transition: all 0.5s ease;
 }
 
 .fa-playstation {
@@ -59,16 +60,19 @@
 p {
     font-size: 0.4rem;
     font-family: sans-serif;
+    transition: all 0.8s ease;
 }
 
 .marque {
-    display: none;
+    display: none; /* serait mieux d'utiliser opacity: 0; (pour la transition)*/
+    
 }
 
 .marqueClicked {
     position: absolute;
     bottom: -5px;
     left: 8.3px;
+    
 }
 
 p#xbox.marqueClicked {
@@ -77,6 +81,7 @@ p#xbox.marqueClicked {
 
 p#steam.marqueClicked {
     left: 13px;
+    transition: all 0.5s ease;
 }
 
 .bigSpan {
@@ -84,5 +89,6 @@ p#steam.marqueClicked {
     flex-wrap: nowrap;
     position : relative;
     text-align: center;
+    transition: all 0.5s ease;
 }
 
