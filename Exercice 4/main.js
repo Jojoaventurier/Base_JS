@@ -1,36 +1,122 @@
 let id =""
 let variable = ""
 
-const buttons = document.getElementsByTagName("span");
-const playstationIcon = document.querySelector("#playstation")
-const xboxIcon = document.querySelector("#xbox")
-const steamIcon = document.querySelector("#steam")
-
 const playsationSpan = document.querySelector("#playstationSpan")
 const xboxSpan = document.querySelector("#xboxSpan")
 const steamSpan = document.querySelector("#steamSpan")
 
-spansAndIcons = document.querySelectorAll(".span")
+/*
+let playstationSpanClassHTML = document.getElementsByClassName(".fa-playstation") // HTML collection
+let playstationSpanClassNode = document.querySelector(".fa-playstation").classList //DOM token list
+let playstationSpanClassName = document.querySelector(".fa-playstation").className //class name (string)
+*/
 
-console.log(spansAndIcons)
+let playstationSpanClassObject = document.querySelector(".fa-playstation") //object
+
+let xboxSpanClassObject = document.querySelector(".fa-xbox") // object
+//let xboxSpanClassHTML = document.getElementsByClassName(".fa-xbox") // html collection
+
+let steamSpanClassObject = document.querySelector(".fa-steam") // object
+//let steamSpanClassHTML = document.getElementsByClassName(".fa-steam") //html collection
+
+let background = document.querySelector(".container")
+
+let isActive = document.querySelector(".span").className
+let isContainerActive = document.querySelector(".container").className
+
+
+const buttons = document.getElementsByTagName("i");
+const buttonPressed = e => {
+    console.log(e.target.className);  // Get ID of Clicked Element
+
+    variable = e.target.className
+
+    switch(e.target.className) {
+
+        case "fa-brands fa-playstation span clicked":
+
+            background.className = "container"
+            playstationSpanClassObject.className = "fa-brands fa-playstation span"
+            xboxSpanClassObject.className = "fa-brands fa-xbox span"
+            steamSpanClassObject.className = "fa-brands fa-steam span"
+
+        break;
+
+        case "fa-brands fa-playstation span":
+
+            background.className = "container containerClickedPlaystation"
+            playstationSpanClassObject.className = "fa-brands fa-playstation span clicked"
+            xboxSpanClassObject.className = "fa-brands fa-xbox span"
+            steamSpanClassObject.className = "fa-brands fa-steam span"
+            
+        break;
+
+        case "fa-brands fa-xbox span clicked":
+
+            background.className = "container"
+            steamSpanClassObject.className = "fa-brands fa-steam span"
+            xboxSpanClassObject.className = "fa-brands fa-xbox span"
+            playstationSpanClassObject.className = "fa-brands fa-playstation span"
+        break;
+
+        case "fa-brands fa-xbox span" : 
+
+            background.className = "container containerClickedXbox"
+            xboxSpanClassObject.className = "fa-brands fa-xbox span clicked"
+            playstationSpanClassObject.className = "fa-brands fa-playstation span"
+            steamSpanClassObject.className = "fa-brands fa-steam span"
+             
+        break
+
+        case "fa-brands fa-steam span clicked":
+            background.className = "container"
+            steamSpanClassObject.className = "fa-brands fa-steam span"
+            playstationSpanClassObject.className = "fa-brands fa-playstation span"
+            xboxSpanClassObject.className = "fa-brands fa-xbox span"
+        break;
+
+        case "fa-brands fa-steam span":
+
+            background.className = "container containerClickedSteam"
+            steamSpanClassObject.className = "fa-brands fa-steam span clicked"
+            playstationSpanClassObject.className = "fa-brands fa-playstation span"
+            xboxSpanClassObject.className = "fa-brands fa-xbox span"
+        break;
 
 
 
-spansAndIcons.forEach(span => {
-    span.addEventListener("click", () => {
-        //console.log("clicked")
-        span.classList.toggle("spanClicked")
-        })
-    })
-    
+        default:
+        break;
+    }
+}
+for (let button of buttons) {
+  button.addEventListener("click", buttonPressed);
+}
+
+
+
+
+
+
 /*
 icons.forEach(icon => {
     icon.addEventListener("click", () => {
         icon.classList.toggle("clicked")
     })
 } )
- */   
+ */ 
 
+/*
+let icons = document.querySelectorAll(".span")
+let iconsClass = document.getElementsByClassName("span")
+
+icons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        //console.log("clicked")
+        icon.classList.toggle("clicked")
+        })
+});
+*/
 
 
 /*
@@ -39,28 +125,6 @@ const buttonPressed = e => {
     console.log(e.target.id)
     id = e.target.id;  // Get ID of Clicked Element
 
-  switch (id) {
-
-    case "playstationSpan":
-    case "playstation":
-
-        playstationIcon.classList.toggle("clicked")
-        console.log("hello")
-        
-        break;
-
-    case "xboxSpan":
-       
-        break;
-
-    case "steamSpan":
-        
-        break;
-
-    default:
-        
-        break;
-    }
 }
 
 for (let button of buttons) {
