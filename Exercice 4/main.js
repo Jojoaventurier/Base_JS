@@ -19,7 +19,7 @@ let marqueSpanPlay = document.querySelector(".playstation") // Node List
 let marqueSpanXbox = document.querySelector(".xbox") // Node List
 let marqueSpanSteam = document.querySelector(".steam") // Node List
 
-let background = document.querySelector(".container")
+let background = document.querySelector(".container") // object
 
 let isActive = document.querySelector(".span").className
 let isContainerActive = document.querySelector(".container").className

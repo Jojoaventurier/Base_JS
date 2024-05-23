@@ -1,9 +1,9 @@
 
 
-let boxes2 = document.getElementsByClassName("box");
+//let boxes2 = document.getElementsByClassName("box");
 let boxes = document.querySelectorAll(".box");
-let essai = "bonjour"
-let variable = "cliquée"
+//let essai = "bonjour"
+//let variable = "cliquée"
 
 
 for (i = 0; i <= boxes.length - 1; i++) {

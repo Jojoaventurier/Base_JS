@@ -17,8 +17,6 @@
    }
 }
 
-
-
 #board {
     display: flex;
     justify-content: space-around;
@@ -47,7 +45,6 @@
     animation:spin 1s linear;
     height: 180px;
     width: 180px;   
-    
 }
 
 
