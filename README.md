@@ -15,7 +15,15 @@ Série d'exercices spécifiques pour travailler les fonctions de bases de Javasc
   Exercice 3: Créer une page web affichant 4 carrés de 200 x 200 pixels avec un fond vert adoptant la disposition suivante (les 4 carrés doivent tenir dans un carré plus grand)
               En cliquant sur n'importe quel carré, celui-ci rétrécit de 10%, décrit une rotation de 360 degrés et prend un fond rouge. En recliquant dessus, le carré reprend des propriétés initiales.
 
-  Exercice 4:
+  Exercice 4: Adapter la couleur d'un background en JS.
+              Le background est gris, 3 îcones sont présentes. Lorsqu'on clique sur l'une des icônes :
+                - Le background prend sa couleur
+                - Le nom du réseau social apparaît
+                - Les bords de l'cône s'arrondissent
+                - une ombre appararaît derrière l'icône
+              Lorsque l'on reclique sur une icône, le background redevient gris et l'icône reprend son aspect d'origine.
 
-  Exercice 5:
+  Exercice 5: Créer une page web affichant une zone de saisie où on pourra saisir une valeur en euros afin de donner la conversion en franc.
+              La conversion (1 euro = 6.55957 francs) se fait en temps réel (pas de bouton de soumission du formulaire).
+              Le résultat en francs est arrondi à deux décimales. En cas de saisie non numérique, un message affiche qu'on doit absolument saisir une valeur numérique. J'ai adapté cette consigne afin que l'on ne puisse pas saisir autre chose que des valeurs numériques. 
   
