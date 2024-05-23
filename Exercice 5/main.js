@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   devisefr.addEventListener('keyup', function(){
     let franc = parseFloat(this.value.trim());
-    let euro = parseFloat(franc/change);
+    let euro = parseFloat(franc/change);z
     //devisefr.value = franc.toFixed(2);
     deviseeu.value = euro.toFixed(2);
   });
