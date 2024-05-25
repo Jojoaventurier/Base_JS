@@ -1,11 +1,4 @@
 
-
-/*
-let playstationSpanClassHTML = document.getElementsByClassName(".fa-playstation") // HTML collection
-let playstationSpanClassNode = document.querySelector(".fa-playstation").classList //DOM token list
-let playstationSpanClassName = document.querySelector(".fa-playstation").className //class name (string)
-*/
-
 let playstationSpanClassObject = document.querySelector(".fa-playstation") //object
 
 let xboxSpanClassObject = document.querySelector(".fa-xbox") // object
@@ -114,39 +107,3 @@ for (let button of buttons) {
 }
 
 
-
-
-/*
-icons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        icon.classList.toggle("clicked")
-    })
-} )
- */ 
-
-/*
-let icons = document.querySelectorAll(".span")
-let iconsClass = document.getElementsByClassName("span")
-
-icons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        //console.log("clicked")
-        icon.classList.toggle("clicked")
-        })
-});
-*/
-
-
-/*
-const buttonPressed = e => {
-
-    console.log(e.target.id)
-    id = e.target.id;  // Get ID of Clicked Element
-
-}
-
-for (let button of buttons) {
-  button.addEventListener("click", buttonPressed);
-}
-*/
- 
